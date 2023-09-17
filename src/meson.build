@@ -1,0 +1,1 @@
+project_sources += files('MainWindow.cpp', 'main.cpp', 'Canvas.cpp')
