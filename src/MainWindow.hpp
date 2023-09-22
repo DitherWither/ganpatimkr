@@ -2,13 +2,12 @@
 #include <gtkmm.h>
 #include "Canvas.hpp"
 
-namespace ganpatimkr {
-
 class MainWindow : public Gtk::ApplicationWindow {
 public:
     MainWindow();
-
+    ~MainWindow();
 private:
-    Canvas area;
+    Canvas* area = nullptr;
+    Renderer* renderer = nullptr;
+    ColorScheme colorScheme;
 };
-}
