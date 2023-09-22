@@ -1,1 +1,1 @@
-project_sources += files('MainWindow.cpp', 'main.cpp', 'Canvas.cpp')
+project_sources += files('MainWindow.cpp', 'main.cpp', 'Canvas.cpp', 'Renderer.cpp')
