@@ -18,6 +18,8 @@ public:
         , color(color)
         , drawArea(drawArea)
     {
+        set_margin(8);
+        
         label.set_hexpand(true);
         label.set_halign(Gtk::Align::START);
 
