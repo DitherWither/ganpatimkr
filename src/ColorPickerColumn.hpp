@@ -1,8 +1,6 @@
 #pragma once
 #include "Canvas.hpp"
 #include "Colors.hpp"
-#include "gtkmm/widget.h"
-#include "sigc++/functors/mem_fun.h"
 #include <gtkmm.h>
 #include <iostream>
 
@@ -19,7 +17,7 @@ public:
         , drawArea(drawArea)
     {
         set_margin(8);
-        
+
         label.set_hexpand(true);
         label.set_halign(Gtk::Align::START);
 
