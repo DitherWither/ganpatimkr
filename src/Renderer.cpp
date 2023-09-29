@@ -6,38 +6,48 @@ void Renderer::draw(
     this->width = width;
     this->height = height;
 
+    cr->set_line_width(4.0);
     drawBackground(cr);
 
     drawD(cr);
-
     drawY(cr);
+    drawP(cr);
 }
 
 void Renderer::drawD(const Cairo::RefPtr<Cairo::Context>& cr)
 {
-    moveToCenter(cr);
-    cr->rel_move_to(-160.0, -20.0);
     colorScheme.d.setAsCurrent(cr);
-    cr->rel_line_to(60, 40);
-    // cr->rel_curve_to(10, -10, 40, -10, 60, 40);
-    cr->rel_curve_to(20, -80, -80, -90, -60, -40);
+
+    moveToCenter(cr);
+    cr->rel_move_to(-160, -20);
+    cr->rel_curve_to(40, -40, 108,  68, 20,  40);
+    cr->rel_line_to(-20, -40);
     cr->stroke();
 }
 
 void Renderer::drawY(const Cairo::RefPtr<Cairo::Context>& cr)
 {
-    moveToCenter(cr);
-    cr->rel_move_to(-130.0, -60.0);
     colorScheme.y.setAsCurrent(cr);
-    cr->rel_curve_to(110, 30, 40, 180, 10, 210);
-    cr->stroke();
 
-    // back to src
     moveToCenter(cr);
-    cr->rel_move_to(10, -80);
-    cr->rel_curve_to(-90, 60, 0, 100, -120, 250);
+    cr->rel_move_to(-100.0, -50.0);
+    cr->rel_line_to(88, 132);
+    cr->rel_move_to(20, -132);
+    cr->rel_line_to(-50, 88);
     cr->stroke();
 }
+
+void Renderer::drawP(const Cairo::RefPtr<Cairo::Context>& cr)
+{
+    colorScheme.p.setAsCurrent(cr);
+
+    moveToCenter(cr);
+    cr->rel_move_to(40, -40);
+    cr->rel_line_to(-50, 88);
+    
+    cr->stroke();
+    // cr->rel_move_to();
+};
 
 void Renderer::drawBackground(const Cairo::RefPtr<Cairo::Context>& cr)
 {

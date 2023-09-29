@@ -1,4 +1,5 @@
 {
     "C_Cpp.default.compileCommands": "build/compile_commands.json",
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++"
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "editor.lineNumbers": "relative"
 }
