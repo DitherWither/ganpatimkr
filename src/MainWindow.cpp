@@ -5,7 +5,7 @@ MainWindow::MainWindow()
     // colorScheme.background.r = 1.0;
     colorScheme.d.r = 1.0;
     colorScheme.y.g = 1.0;
-    colorScheme.y.b = 1.0;
+    colorScheme.p.b = 1.0;
 
     renderer = new Renderer(colorScheme);
     area = new Canvas(renderer);
