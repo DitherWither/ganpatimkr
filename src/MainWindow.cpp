@@ -6,6 +6,9 @@ MainWindow::MainWindow()
     colorScheme.d.r = 1.0;
     colorScheme.y.g = 1.0;
     colorScheme.p.b = 1.0;
+    
+    colorScheme.mukut.r = 1.0;
+    colorScheme.mukut.g = 1.0;
 
     renderer = new Renderer(colorScheme);
     area = new Canvas(renderer);

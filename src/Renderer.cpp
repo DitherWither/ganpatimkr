@@ -12,7 +12,12 @@ void Renderer::draw(
     drawD(cr);
     drawY(cr);
     drawP(cr);
+    drawMukut(cr);
 }
+
+// Most of the points were obtained using a graph paper,
+// some of the control points for curves were obtained
+// via a bezier curve visualizer i found on desmos
 
 void Renderer::drawD(const Cairo::RefPtr<Cairo::Context>& cr)
 {
@@ -48,6 +53,23 @@ void Renderer::drawP(const Cairo::RefPtr<Cairo::Context>& cr)
     cr->stroke();
     // cr->rel_move_to();
 };
+
+void Renderer::drawMukut(const Cairo::RefPtr<Cairo::Context>& cr)
+{
+    colorScheme.mukut.setAsCurrent(cr);
+
+    moveToCenter(cr);
+    cr->rel_move_to(-100, -80);
+    cr->rel_line_to(100, 0);
+
+    cr->rel_move_to(-90, -20);
+    cr->rel_line_to(80,0);
+
+    cr->rel_move_to(-70, -20);
+    cr->rel_line_to(60, 0);
+    
+    cr->stroke();
+}
 
 void Renderer::drawBackground(const Cairo::RefPtr<Cairo::Context>& cr)
 {
