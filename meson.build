@@ -5,7 +5,7 @@ project(
 )
 
 gtkmm_dep = dependency('gtkmm-4.0', version: '>= 4.6.0')
-
+libdadwaita_dep = dependency('libadwaita-1')
 project_sources = []
 
 subdir('src')
@@ -13,5 +13,5 @@ subdir('src')
 executable(
     'ganpatimkr',
     project_sources,
-    dependencies: [gtkmm_dep]
+    dependencies: [gtkmm_dep, libdadwaita_dep]
 )

@@ -3,7 +3,6 @@
 
 MainWindow::MainWindow()
 {
-    // colorScheme.background.r = 1.0;
     colorScheme.d.r = 1.0;
     colorScheme.y.g = 1.0;
     colorScheme.p.b = 1.0;
@@ -39,6 +38,10 @@ Gtk::Box MainWindow::PropertiesMenu()
     titleLabel.set_use_markup(true);
     box.append(titleLabel);
 
+    // This causes a "memory leak", but the instances are needed until the window closes
+    // so there is no point in writing code to free their memory, and it adds a bunch of 
+    // additional complexity i'd rather avoid
+
     ColorPickerColumn* bgPicker
         = new ColorPickerColumn("Background Color", &colorScheme.background, area);
     box.append(*bgPicker);
@@ -61,29 +64,5 @@ Gtk::Box MainWindow::PropertiesMenu()
 
     return box;
 }
-
-// Gtk::Box MainWindow::ColorPickerColumn(std::string title, ColorRGBA& color)
-// {
-//     Gtk::Box box;
-//     box.set_orientation(Gtk::Orientation::HORIZONTAL);
-
-//     Gtk::Label label(title);
-//     label.set_hexpand(true);
-//     label.set_halign(Gtk::Align::START);
-//     box.append(label);
-
-//     Gtk::ColorButton colorButton;
-//     Gdk::RGBA rgba = color.toGdkRGBA();
-//     colorButton.set_rgba(rgba);
-//     // colorButton.signal_color_activated().connect([](const Gdk::RGBA&
-//     newColor){
-//     //     color.r = newColor.get_red();
-//     //     color.g =
-//     // });
-
-//     box.append(colorButton);
-
-//     return box;
-// }
 
 MainWindow::~MainWindow() { }

@@ -11,5 +11,4 @@ private:
     Renderer* renderer = nullptr;
     ColorScheme colorScheme;
     Gtk::Box PropertiesMenu();
-    // Gtk::Box ColorPickerColumn(std::string title, ColorRGBA& color);
 };

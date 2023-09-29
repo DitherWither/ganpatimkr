@@ -42,7 +42,6 @@ void Renderer::drawY(const Cairo::RefPtr<Cairo::Context>& cr)
     cr->rel_move_to(40, -137);
     cr->rel_line_to(-50, 88);
 
-    // TODO curve the bottom end of y;
     cr->stroke();
 }
 
