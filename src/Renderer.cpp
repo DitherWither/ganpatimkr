@@ -37,8 +37,9 @@ void Renderer::drawY(const Cairo::RefPtr<Cairo::Context>& cr)
     moveToCenter(cr);
     cr->rel_move_to(-100.0, -50.0);
     cr->rel_line_to(88, 132);
+    cr->rel_curve_to(10,20,-20,20,-20, 5);
 
-    cr->rel_move_to(20, -132);
+    cr->rel_move_to(40, -137);
     cr->rel_line_to(-50, 88);
 
     // TODO curve the bottom end of y;
