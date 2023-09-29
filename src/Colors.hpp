@@ -18,4 +18,5 @@ public:
     ColorRGBA d;
     ColorRGBA y;
     ColorRGBA p;
+    ColorRGBA mukut;
 };
