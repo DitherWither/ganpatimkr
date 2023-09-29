@@ -25,7 +25,7 @@ void Renderer::drawD(const Cairo::RefPtr<Cairo::Context>& cr)
 
     moveToCenter(cr);
     cr->rel_move_to(-160, -20);
-    cr->rel_curve_to(40, -40, 108,  68, 20,  40);
+    cr->rel_curve_to(40, -40, 108, 68, 20, 40);
     cr->rel_line_to(-20, -40);
     cr->stroke();
 }
@@ -37,7 +37,7 @@ void Renderer::drawY(const Cairo::RefPtr<Cairo::Context>& cr)
     moveToCenter(cr);
     cr->rel_move_to(-100.0, -50.0);
     cr->rel_line_to(88, 132);
-    cr->rel_curve_to(10,20,-20,20,-20, 5);
+    cr->rel_curve_to(10, 20, -20, 20, -20, 5);
 
     cr->rel_move_to(40, -137);
     cr->rel_line_to(-50, 88);
@@ -54,7 +54,7 @@ void Renderer::drawP(const Cairo::RefPtr<Cairo::Context>& cr)
     cr->rel_line_to(-50, 88);
     cr->rel_move_to(50, -88);
 
-    cr->rel_curve_to(40, -10, 80,  80, -35,  60);
+    cr->rel_curve_to(40, -10, 80, 80, -35, 60);
     cr->stroke();
 };
 
@@ -67,17 +67,17 @@ void Renderer::drawMukut(const Cairo::RefPtr<Cairo::Context>& cr)
     cr->rel_line_to(100, 0);
 
     cr->rel_move_to(-90, -20);
-    cr->rel_line_to(80,0);
+    cr->rel_line_to(80, 0);
 
     cr->rel_move_to(-70, -20);
     cr->rel_line_to(60, 0);
-    
+
     cr->rel_move_to(-10, -20);
     cr->rel_line_to(0, -20);
 
     cr->rel_curve_to(0, -30, -40, -30, -40, 0);
     cr->rel_line_to(0, 20);
-    
+
     cr->stroke();
 }
 

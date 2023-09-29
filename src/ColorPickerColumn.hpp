@@ -11,7 +11,8 @@ class ColorPickerColumn : public Gtk::Box {
     Gtk::Widget* drawArea;
 
 public:
-    inline ColorPickerColumn(std::string title, ColorRGBA* color, Gtk::Widget* drawArea)
+    inline ColorPickerColumn(
+        std::string title, ColorRGBA* color, Gtk::Widget* drawArea)
         : label(Gtk::Label(title))
         , color(color)
         , drawArea(drawArea)

@@ -1,11 +1,12 @@
 #pragma once
-#include <gtkmm.h>
 #include "Canvas.hpp"
+#include <gtkmm.h>
 
 class MainWindow : public Gtk::ApplicationWindow {
 public:
     MainWindow();
     ~MainWindow();
+
 private:
     Canvas* area = nullptr;
     Renderer* renderer = nullptr;

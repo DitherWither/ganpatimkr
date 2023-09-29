@@ -1,11 +1,15 @@
 #pragma once
-#include <cairomm/cairomm.h>
 #include "Colors.hpp"
+#include <cairomm/cairomm.h>
 
 class Renderer {
 public:
-    inline Renderer(ColorScheme& colorScheme) : colorScheme(colorScheme) {}
+    inline Renderer(ColorScheme& colorScheme)
+        : colorScheme(colorScheme)
+    {
+    }
     void draw(const Cairo::RefPtr<Cairo::Context>& cr, int width, int height);
+
 private:
     int width;
     int height;
