@@ -3,12 +3,25 @@
 
 MainWindow::MainWindow()
 {
-    colorScheme.d.r = 1.0;
-    colorScheme.y.g = 1.0;
-    colorScheme.p.b = 1.0;
+    colorScheme.background.r = 0.141;
+    colorScheme.background.g = 0.122;
+    colorScheme.background.b = 0.192;
 
-    colorScheme.mukut.r = 1.0;
-    colorScheme.mukut.g = 1.0;
+    colorScheme.d.r = 0.753;
+    colorScheme.d.g = 0.11;
+    colorScheme.d.b = 0.157;
+
+    colorScheme.y.r = 0.18;
+    colorScheme.y.g = 0.761;
+    colorScheme.y.b = 0.494;
+
+    colorScheme.p.r = 0.208;
+    colorScheme.p.g = 0.518;
+    colorScheme.p.b = 0.894;
+
+    colorScheme.mukut.r = 0.965;
+    colorScheme.mukut.g = 0.827;
+    colorScheme.mukut.b = 0.176;
 
     renderer = new Renderer(colorScheme);
     area = new Canvas(renderer);
@@ -38,12 +51,12 @@ Gtk::Box MainWindow::PropertiesMenu()
     titleLabel.set_use_markup(true);
     box.append(titleLabel);
 
-    // This causes a "memory leak", but the instances are needed until the window closes
-    // so there is no point in writing code to free their memory, and it adds a bunch of 
-    // additional complexity i'd rather avoid
+    // This causes a "memory leak", but the instances are needed until the
+    // window closes so there is no point in writing code to free their memory,
+    // and it adds a bunch of additional complexity i'd rather avoid
 
-    ColorPickerColumn* bgPicker
-        = new ColorPickerColumn("Background Color", &colorScheme.background, area);
+    ColorPickerColumn* bgPicker = new ColorPickerColumn(
+        "Background Color", &colorScheme.background, area);
     box.append(*bgPicker);
 
     ColorPickerColumn* mukutPicker
