@@ -90,5 +90,5 @@ void Renderer::drawBackground(const Cairo::RefPtr<Cairo::Context>& cr)
 
 void Renderer::moveToCenter(const Cairo::RefPtr<Cairo::Context>& cr)
 {
-    cr->move_to(width / 2, height / 2);
+    cr->move_to(width / 2.0, height / 2.0);
 }
