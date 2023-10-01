@@ -1,6 +1,8 @@
 # GanpatiMkr
 
-A project I made for the pratham code competition conducted in DYP collage, Kasaba Bawada
+A project I made for the pratham code competition conducted in DYP collage, Kasaba Bawada in 2023
+
+This won the 1st prize for the C/C++ cluster
 
 It uses gtkmm for the UI, and cairo for the graphics
 
